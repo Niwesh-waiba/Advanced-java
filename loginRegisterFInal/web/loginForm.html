@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login Form</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+            }
+
+            .loginDiv {
+                border: solid 5px black;
+                background-color: #ffff99;
+                width: 500px;
+                margin: auto;
+                margin-top: 150px;
+                padding: 20px;
+                display: flex;
+                justify-content: center;
+            }
+
+            .loginDiv h1 {
+                text-align: center;
+                margin: 0 0 15px 0;
+            }
+
+            .loginDiv form {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .loginDiv label {
+                margin-bottom: 5px;
+                float: left;
+            }
+
+            .loginDiv input[type="email"],
+            .loginDiv input[type="password"] {
+                float: right;
+                padding: 5px;
+                margin: 0 0 10px 20px;
+            }
+
+            .loginDiv input[type="submit"] {
+                padding: 7px 15px;
+                margin-bottom: 10px;
+                background-color: #ffff99;
+                color: #000;
+                border: 1px solid #000;
+                cursor: pointer;
+                align-self: center;
+            }
+
+            .loginDiv input[type="submit"]:hover {
+                background-color: #000;
+                color: #fff;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="loginDiv">
+            <form action="login" method="POST">
+                <h1>Login Form</h1>
+                <div>
+                    <label for="userEmail">Email:</label>
+                    <input type="email" id="userEmail" name="userEmail" required>
+                </div>
+                <div>
+                    <label for="userPassword">Password:</label>
+                    <input type="password" id="userPassword" name="userPassword" required>
+                </div>
+                <input type="submit" value="Login">
+
+                Not registered? <a href="registerForm.html">Register here</a>
+            </form>
+        </div>
+    </body>
+</html>

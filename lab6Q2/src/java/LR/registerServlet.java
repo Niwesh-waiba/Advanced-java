@@ -19,14 +19,6 @@ import jakarta.servlet.http.HttpServletResponse;
  */
 @WebServlet(name = "registerServlet", urlPatterns = {"/registerServlet"})
 public class registerServlet extends HttpServlet {
-
-    
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-       
-    }
-
     
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -42,11 +34,5 @@ public class registerServlet extends HttpServlet {
 
         out.print(" First Name: " + firstName +"<br> Last Name: " + lastName +"<br> Email: " + userEmail +"<br> Password: " + userPassword +"<br> Confirm Password: " + confirmPassword +"<br>");
     }
-
-    
-    @Override
-    public String getServletInfo() {
-        return "Short description";
-    }// </editor-fold>
 
 }

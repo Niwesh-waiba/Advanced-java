@@ -20,13 +20,6 @@ import java.sql.*;
  */
 @WebServlet(name = "registerServlet", urlPatterns = {"/registerServlet"})
 public class dbServlet extends HttpServlet {
-
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-
-    }
-
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -43,7 +36,7 @@ public class dbServlet extends HttpServlet {
             
             RequestDispatcher rd = request.getRequestDispatcher("registerForm.html");
             rd.include(request, response);
-            out.print("<div  style=\"text-align: center;\">confirm password </div>");
+            out.print("<div  style=\"text-align: center;\">different confirm password </div>");
         }
 
         try {
@@ -90,10 +83,4 @@ public class dbServlet extends HttpServlet {
         }
 
     }
-
-    @Override
-    public String getServletInfo() {
-        return "Short description";
-    }// </editor-fold>
-
 }
